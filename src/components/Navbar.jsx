@@ -1,14 +1,33 @@
+import { Link } from 'react-router-dom'
+
 function Navbar() {
   return (
     <nav className="navbar">
-      <div className="logo">JobNest</div>
+
+      <div className="logo">
+        JobNest
+      </div>
 
       <div className="nav-links">
-        <a href="/">Home</a>
-        <a href="/jobs">Jobs</a>
-        <a href="/add-job">Add Job</a>
-        <a href="/about">About</a>
+
+        <Link to="/">
+          Home
+        </Link>
+
+        <Link to="/jobs">
+          Jobs
+        </Link>
+
+        <Link to="/add-job">
+          Add Job
+        </Link>
+
+        <Link to="/about">
+          About
+        </Link>
+
       </div>
+
     </nav>
   )
 }
