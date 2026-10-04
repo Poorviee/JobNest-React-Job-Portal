@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 function JobCard({ job }) {
   return (
     <div className="job-card">
@@ -7,14 +9,15 @@ function JobCard({ job }) {
       </div>
 
       <p className="company">{job.company}</p>
-
       <p className="location">📍 {job.location}</p>
-
       <p className="description">{job.description}</p>
 
-      <button className="details-button">
+      <Link
+        to={`/jobs/${job.id}`}
+        className="details-button"
+      >
         View Details
-      </button>
+      </Link>
     </div>
   )
 }
